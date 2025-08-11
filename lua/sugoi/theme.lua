@@ -1,6 +1,10 @@
+-- luacheck: globals vim
+---@diagnostic disable: undefined-global
 local Group = require('colorbuddy').Group
 local colors = require('colorbuddy').colors
 local styles = require('colorbuddy').styles
+local groups = require('colorbuddy').groups
+
 
 local parseStyleOpts = function(opts)
   return {
@@ -90,6 +94,8 @@ function M.setup(opts)
   Group.new('DiffDelete', colors.secondary, colors.sugoi_8)
   Group.new('DiffText', colors.sugoi_0, colors.sugoi_7)
   Group.new('ErrorMsg', textOnColor(colors.diagnostic_error), colors.diagnostic_error)
+  -- Group.new('VertSplit', colors.accent, colors.sugoi_9)
+  -- Group.new('WinSeparator', colors.secondary, colors.background)
   Group.new('VertSplit', colors.secondary, colors.sugoi_9)
   Group.new('WinSeparator', colors.secondary, colors.sugoi_9)
   Group.new('WinBar', colors.sugoi_4, colors.background, styles.bold)
@@ -119,6 +125,8 @@ function M.setup(opts)
   Group.new('WarningMsg', colors.primary)
   Group.new('WildMenu', colors.sugoi_5, colors.sugoi_8)
 
+  -- Group.new('FloatBorder', colors.accent, colors.background)
+  -- Group.new('FloatTitle', colors.background, colors.accent)
   Group.new('FloatBorder', colors.secondary, colors.background)
   Group.new('FloatTitle', colors.secondary, colors.background)
   Group.new('NormalFloat', colors.sugoi_4)
@@ -145,9 +153,11 @@ function M.setup(opts)
   Group.new('@function.macro', colors.primary)
   Group.new('@include', colors.sugoi_6)
   Group.new('@keyword', colors.sugoi_5)
+  -- Group.new('@keyword.function', colors.accent)
   Group.new('@keyword.function', colors.sugoi_5)
   Group.new('@keyword.operator', colors.sugoi_6)
-  Group.new('@keyword.return', colors.sugoi_0)
+  -- Group.new('@keyword.return', colors.sugoi_0)
+  Group.new('@keyword.return', colors.sugoi_0, nil, styles.bold + styles.italic)
   Group.new('@label', colors.sugoi_2)
   Group.new('@macro', colors.primary)
   Group.new('@method', colors.sugoi_1)

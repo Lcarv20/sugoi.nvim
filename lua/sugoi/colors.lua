@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+---@diagnostic disable: undefined-global
 local Color = require('colorbuddy').Color
 local colors = require('colorbuddy').colors
 
@@ -36,6 +38,7 @@ function M.setup(opts)
   -- Can be configured by palette or end user
   Color.new('primary', getConfiguredColor('primary'))
   Color.new('secondary', getConfiguredColor('secondary'))
+  Color.new('accent', getConfiguredColor('accent'))
 
   -- Set up semantic color palette
   -- These are to be used sparingly, but have semantic meaning for things like lsp diagnostics, git diffs, etc.

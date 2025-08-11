@@ -7,7 +7,7 @@ return {
   -- secondary = '#B7B1F2',
   primary = "#e89b6c", -- warm terracotta
   secondary = "#d66b6c", -- muted coral/rose
-
+  accent = "#8184c5", -- cool blue accent to complement warm primaries
 
   sugoi_0 = '#eae6e1',
   sugoi_1 = '#dbd6d2',
@@ -19,6 +19,17 @@ return {
   sugoi_7 = '#6f6b67',
   sugoi_8 = '#413F3D',
   sugoi_9 = '#252323',
+
+  -- sugoi_0 = '#c6d2ff',
+  -- sugoi_1 = '#E5E1DD',
+  -- sugoi_2 = '#D5D1CE',
+  -- sugoi_3 = '#C5C1BB',
+  -- sugoi_4 = '#B5B1AA',
+  -- sugoi_5 = '#A5A199',
+  -- sugoi_6 = '#959188',
+  -- sugoi_7 = '#858177',
+  -- sugoi_8 = '#514F4D',
+  -- sugoi_9 = '#292727',
 
   diagnostic_error = '#d66b6c',
   diagnostic_warning = '#e89b6c',

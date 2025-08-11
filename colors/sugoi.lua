@@ -1,1 +1,1 @@
-require("sugoi").setup()
+require("sugoi").apply()
