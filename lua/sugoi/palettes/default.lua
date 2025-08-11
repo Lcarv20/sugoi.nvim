@@ -1,7 +1,6 @@
 return {
   background = '#181818',
   foreground = '#eae6e1',
-  comment = '#929094',
 
   -- primary = '#A3DC9A',
   -- secondary = '#B7B1F2',

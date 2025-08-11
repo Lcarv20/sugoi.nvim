@@ -33,6 +33,7 @@ function M.setup(opts)
   -- Set up background color
   -- Can be configured by palette or end user
   Color.new('background', getConfiguredColor('background'))
+  Color.new('foreground', getConfiguredColor('foreground'))
 
   -- Set up primary and secondary flavor colors
   -- Can be configured by palette or end user

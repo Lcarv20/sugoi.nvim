@@ -23,10 +23,22 @@ function M.apply()
   local opts = get_effective_opts()
 
   vim.api.nvim_command("set termguicolors")
-  vim.api.nvim_command("set background=dark")
 
-  require('sugoi.colors').setup(opts)
-  require('sugoi.theme').setup(opts)
+  -- Respect explicit background override from opts if provided
+  if opts.background == 'light' or opts.background == 'dark' then
+    vim.o.background = opts.background
+  end
+
+  -- Auto-select palette based on current background unless explicitly set
+  local bg = vim.o.background or 'dark'
+  local palette_name = opts.palette
+  if not palette_name or palette_name == 'auto' then
+    palette_name = (bg == 'light') and 'light' or 'default'
+  end
+  local effective_opts = vim.tbl_extend('force', opts, { palette = palette_name })
+
+  require('sugoi.colors').setup(effective_opts)
+  require('sugoi.theme').setup(effective_opts)
   require('sugoi.plugins')
   require('sugoi.languages')
 
