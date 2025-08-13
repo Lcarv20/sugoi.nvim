@@ -63,6 +63,3 @@ Group.link("SnacksPickerSelected", groups.PmenuSel)
 Group.link("SnacksPickerToggle", groups.SnacksProfilerBadgeInfo)
 Group.link("SnacksPickerPickWinCurrent", groups.Search)
 Group.link("SnacksPickerPickWin", groups.CurSearch)
-
--- Setup backdrop for telescope and oil
-require("sugoi.plugins.snacks.init").setup()
