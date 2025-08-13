@@ -96,8 +96,6 @@ function M.setup(opts)
   Group.new('ErrorMsg', textOnColor(colors.diagnostic_error), colors.diagnostic_error)
   Group.new('VertSplit', colors.secondary, colors.background)
   Group.new('WinSeparator', colors.secondary, colors.background)
-  -- Group.new('VertSplit', colors.secondary, colors.sugoi_9)
-  -- Group.new('WinSeparator', colors.secondary, colors.sugoi_9)
   Group.new('WinBar', colors.sugoi_4, colors.background, styles.bold)
   Group.new('WinBarNC', colors.sugoi_4, colors.background)
 
