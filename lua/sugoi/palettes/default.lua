@@ -2,11 +2,11 @@ return {
   background = '#181818',
   foreground = '#eae6e1',
 
-  -- primary = '#A3DC9A',
-  -- secondary = '#B7B1F2',
-  primary = "#e89b6c", -- warm terracotta
-  secondary = "#d66b6c", -- muted coral/rose
-  accent = "#8184c5", -- cool blue accent to complement warm primaries
+  -- primary = "#e89b6c", -- warm terracotta
+  -- secondary = "#d66b6c", -- muted coral/rose
+  primary = "#f5a676", -- warm terracotta
+  secondary = "#f09c9c", -- muted coral/rose
+  accent = "#B7B1F2", -- cool blue accent to complement warm primaries
 
   sugoi_0 = '#eae6e1',
   sugoi_1 = '#dbd6d2',
