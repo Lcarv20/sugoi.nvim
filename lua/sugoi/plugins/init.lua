@@ -15,5 +15,4 @@ require('sugoi.plugins.sneak')
 require('sugoi.plugins.flash')
 require('sugoi.plugins.snacks')
 require('sugoi.plugins.cmp')
-
-
+require("sugoi.plugins.blink")

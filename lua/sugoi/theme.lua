@@ -94,8 +94,8 @@ function M.setup(opts)
   Group.new('DiffDelete', colors.secondary, colors.sugoi_8)
   Group.new('DiffText', colors.sugoi_0, colors.sugoi_7)
   Group.new('ErrorMsg', textOnColor(colors.diagnostic_error), colors.diagnostic_error)
-  Group.new('VertSplit', colors.secondary, colors.background)
-  Group.new('WinSeparator', colors.secondary, colors.background)
+  Group.new('VertSplit', colors.accent, colors.background)
+  Group.new('WinSeparator', colors.accent, colors.background)
   Group.new('WinBar', colors.sugoi_4, colors.background, styles.bold)
   Group.new('WinBarNC', colors.sugoi_4, colors.background)
 
@@ -125,8 +125,8 @@ function M.setup(opts)
 
   -- Group.new('FloatBorder', colors.accent, colors.background)
   -- Group.new('FloatTitle', colors.background, colors.accent)
-  Group.new('FloatBorder', colors.secondary, colors.background)
-  Group.new('FloatTitle', colors.secondary, colors.background)
+  Group.new('FloatBorder', colors.accent, colors.background)
+  Group.new('FloatTitle', colors.background, colors.accent)
   Group.new('NormalFloat', colors.sugoi_4)
 
   -- Treesitter Syntax Highlighting

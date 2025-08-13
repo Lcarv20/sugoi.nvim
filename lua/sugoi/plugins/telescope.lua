@@ -3,11 +3,11 @@ local Group = cb.Group
 local groups = cb.groups
 local colors = cb.colors
 
-Group.new('TelescopeTitle', colors.neutral_2)
-Group.new('TelescopeResultsNormal', colors.neutral_5)
+Group.new('TelescopeTitle', colors.sugoi_2)
+Group.new('TelescopeResultsNormal', colors.sugoi_5)
 -- Ensure telescope separators pick up secondary via FloatBorder
-Group.new('TelescopeMatching', colors.neutral_0)
-Group.new('TelescopePromptCounter', colors.neutral_8, nil)
+Group.new('TelescopeMatching', colors.sugoi_0)
+Group.new('TelescopePromptCounter', colors.sugoi_8, nil)
 Group.link('TelescopeBorder', groups.FloatBorder)
 Group.link('TelescopePromptBorder', groups.FloatBorder)
 Group.link('TelescopeResultsBorder', groups.FloatBorder)

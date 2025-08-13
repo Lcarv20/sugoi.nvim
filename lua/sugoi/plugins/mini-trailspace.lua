@@ -2,6 +2,6 @@ local cb = require('colorbuddy')
 local Group = cb.Group
 local colors = cb.colors
 
-Group.new('MiniTrailspace', nil, colors.neutral_7)
+Group.new('MiniTrailspace', nil, colors.sugoi_7)
 
 
