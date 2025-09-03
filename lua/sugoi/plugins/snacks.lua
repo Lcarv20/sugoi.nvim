@@ -2,6 +2,7 @@ local cb = require("colorbuddy")
 local Group = cb.Group
 local groups = cb.groups
 local colors = cb.colors
+local styles = cb.styles
 
 -- Notifier
 Group.link("SnacksNotifierDebug", groups.Normal)
@@ -60,6 +61,6 @@ Group.new("SnacksPickerInputBorder", colors.accent, colors.background)
 Group.link("SnacksPickerInputTitle", groups.FloatTitle)
 Group.link("SnacksPickerBoxTitle", groups.FloatTitle)
 Group.link("SnacksPickerSelected", groups.PmenuSel)
-Group.link("SnacksPickerToggle", groups.SnacksProfilerBadgeInfo)
+Group.new("SnacksPickerToggle", colors.fg, colors.accent, styles.italic)
 Group.link("SnacksPickerPickWinCurrent", groups.Search)
 Group.link("SnacksPickerPickWin", groups.CurSearch)
