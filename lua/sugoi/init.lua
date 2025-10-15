@@ -2,13 +2,17 @@
 ---@diagnostic disable: undefined-global
 local M = {}
 
+local defaults = {
+  transparent = false,
+}
+
 -- Store user options set via require('sugoi').setup(opts)
 M._opts = nil
 
 -- Prepare theme options without applying the colorscheme.
 -- Users can call :colorscheme sugoi (or require('sugoi').apply()) later to apply.
 function M.setup(opts)
-	M._opts = opts or {}
+  M._opts = vim.tbl_deep_extend("force", defaults, opts or {})
 	-- Also expose opts globally so :colorscheme sugoi can pick them up across modules
 	vim.g.sugoi_opts = M._opts
 end
@@ -42,14 +46,6 @@ function M.apply()
 	require("sugoi.theme").setup(effective_opts)
 	require("sugoi.plugins")
 	require("sugoi.languages")
-
-	-- if effective_opts.transparent then
-	-- 	-- transparent background
-	-- 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	-- 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	-- 	vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-	-- 	vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
-	-- end
 
 	vim.api.nvim_command('let g:colors_name = "sugoi"')
 end

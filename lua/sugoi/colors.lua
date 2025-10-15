@@ -65,6 +65,13 @@ function M.setup(opts)
   -- Pure black and white for text on dynamic background colors
   Color.new('black', '#000000')
   Color.new('white', '#FFFFFF')
+
+  -- Pure black and white for text on dynamic background colors
+  Color.new('none', 'NONE')
+
+  -- Sidebar and Floats are configurable
+
+  colors.bg_float = opts.transparent and colors.none or colors.background
 end
 
 return M

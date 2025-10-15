@@ -60,14 +60,14 @@ function M.setup(opts)
   Group.new('SugoiTextOnSecondary', textOnColor(colors.secondary), colors.secondary)
 
   -- Generic Highlighting
-  Group.new('Normal', colors.foreground, colors.background)
+  Group.new('Normal', colors.foreground, opts.transparent and colors.none or colors.background)
   Group.new('Search', nil, colors.sugoi_8)
   Group.new('IncSearch', colors.sugoi_0, colors.sugoi_7)
   Group.new('Substitute', nil, colors.sugoi_8)
   Group.new('CurSearch', colors.sugoi_9, colors.sugoi_2)
   Group.new('Visual', nil, colors.sugoi_8)
-  Group.new('SignColumn', nil, colors.background)
-  Group.new('LineNr', colors.sugoi_8, colors.background)
+  Group.new('SignColumn', nil, opts.transparent and colors.none or colors.background)
+  Group.new('LineNr', colors.sugoi_8, opts.transparent and colors.none or colors.background)
   Group.new('EndOfBuffer', colors.sugoi_8, nil)
 
   Group.new('Comment', colors.sugoi_7)
@@ -94,8 +94,8 @@ function M.setup(opts)
   Group.new('DiffDelete', colors.secondary, colors.sugoi_8)
   Group.new('DiffText', colors.sugoi_0, colors.sugoi_7)
   Group.new('ErrorMsg', textOnColor(colors.diagnostic_error), colors.diagnostic_error)
-  Group.new('VertSplit', colors.accent, colors.background)
-  Group.new('WinSeparator', colors.accent, colors.background)
+  Group.new('VertSplit', colors.accent, opts.transparent and colors.none or colors.background)
+  Group.new('WinSeparator', colors.accent, opts.transparent and colors.none or colors.background)
   Group.new('WinBar', colors.sugoi_4, colors.background, styles.bold)
   Group.new('WinBarNC', colors.sugoi_4, colors.background)
 
@@ -125,9 +125,9 @@ function M.setup(opts)
 
   -- Group.new('FloatBorder', colors.accent, colors.background)
   -- Group.new('FloatTitle', colors.background, colors.accent)
-  Group.new('FloatBorder', colors.accent, colors.background)
+  Group.new('FloatBorder', colors.accent, colors.bg_float)
   Group.new('FloatTitle', colors.background, colors.accent)
-  Group.new('NormalFloat', colors.sugoi_4)
+  Group.new('NormalFloat', colors.sugoi_4, colors.bg_float)
 
   -- Treesitter Syntax Highlighting
   -- See :help treesitter-highlight-groups
