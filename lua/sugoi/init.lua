@@ -21,7 +21,7 @@ end
 -- Apply the theme. Intended to be called by :colorscheme sugoi.
 function M.apply()
 	local opts = get_effective_opts()
-  vim.cmd("hi clear")
+	vim.cmd("hi clear")
 
 	vim.api.nvim_command("set termguicolors")
 
@@ -42,6 +42,14 @@ function M.apply()
 	require("sugoi.theme").setup(effective_opts)
 	require("sugoi.plugins")
 	require("sugoi.languages")
+
+	-- if effective_opts.transparent then
+	-- 	-- transparent background
+	-- 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	-- 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- 	vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+	-- 	vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+	-- end
 
 	vim.api.nvim_command('let g:colors_name = "sugoi"')
 end
