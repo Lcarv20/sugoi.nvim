@@ -1,5 +1,8 @@
-local Group = require('colorbuddy').Group
+local cb = require('colorbuddy')
+local Group = cb.Group
+local groups = cb.groups
 
-Group.new('MiniNotifyBorder', 'FloatBorder')
-Group.new('MiniNotifyNormal', 'NormalFloat')
-Group.new('MiniNotifyTitle', 'FloatTitle')
+Group.link('MiniNotifyBorder', groups.FloatBorder)
+Group.link('MiniNotifyNormal', groups.NormalFloat)
+Group.link('MiniNotifyTitle', groups.FloatTitle)
+
