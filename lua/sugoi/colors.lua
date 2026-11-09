@@ -9,6 +9,9 @@ function M.getPalette(palette)
   if type(palette) == 'table' then
     return palette
   end
+  if palette == 'dark' then
+    palette = 'default'
+  end
   return require('sugoi.palettes.' .. palette)
 end
 
