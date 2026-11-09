@@ -1,0 +1,32 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Lua compiled files
+*.luac
+*.o
+*.so
+
+# Editor & Swap files
+*.swp
+*.swo
+*~
+*.bak
+.netrwhist
+Session.vim
+
+# Neovim / Tags
+tags
+tags-*
+
+# Lua tooling & IDE configs
+.luarc.json
+.stylua.toml
+.luacheckrc
+.busted/
+.idea/
+.vscode/
+
+# Logs & Scratch files
+*.log
+scratch/

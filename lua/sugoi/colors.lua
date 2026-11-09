@@ -6,6 +6,9 @@ local colors = require('colorbuddy').colors
 local M = {}
 
 function M.getPalette(palette)
+  if type(palette) == 'table' then
+    return palette
+  end
   return require('sugoi.palettes.' .. palette)
 end
 
